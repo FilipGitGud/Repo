@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="en">
 <head>
-    <title>Naslov</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-<h1>Ovo je header</h1>
-<p>Ovo je paragraf - promjena!</p>
-<p>Ovo je drugi paragraf</p>
-<p>Jos jedan paragraf</p>
-<button>Button</button>
+    <h1>Auto123</h1>
+    <p id="primjer"></p>
+    <p id="primjer1"></p>
+    
+<script>
+        function Auto(tip, boja, broj_sjedala, model) {
+            this.Opel = tip;
+            this.Plava = boja;
+            this.četiri = broj_sjedala;
+            this.Vectra = model;
+  }
+  
+    var NoviAuto = new Auto("BMW", "Crna", 4, "E36");
+
+        document.getElementById("primjer").innerHTML =
+        "Model novog auta je: " + NoviAuto.Vectra + ". Boja auta je " + NoviAuto.Plava + " BTW Tip auta je " + NoviAuto.Opel;
+
+        Auto.prototype.Novo = "ValjdaNoviAuto";
+        document.getElementById("primjer1").innerHTML =
+        "Možda sam kupio novi auto--> " + NoviAuto.Novo; 
+</script>
 </body>
 </html>
